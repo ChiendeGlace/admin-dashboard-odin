@@ -1,0 +1,136 @@
+$color-primary: #940df2;
+$accent: #6BF20D;
+$bg: lightgray;
+$white: white;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+img {
+    width: 50px;
+    height: 50px;
+}
+.main {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 15% 85%;
+    height: 100vh;
+}
+header {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    align-items: center;
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        i {
+            cursor: pointer;
+            color: black;
+            font-size: 1.5rem;
+        }
+        .github {
+            font-size: 2rem;
+        }
+        input {
+            border: none;
+            outline: 2px solid black;
+            border-radius: 5px;
+            padding: 0.5em 7.5vw 0.5em 1em;
+        }
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        .btn {
+            cursor: pointer;
+            background-color: $color-primary;
+            padding: 0.5em 1.5em;
+            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+        }
+    }
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        i {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        h3 {
+            font-size: 1.25rem;
+        }
+    }
+} 
+
+.sidebar {
+    grid-row: 1/3;
+    background-color: $color-primary;
+    display: grid;
+    grid-template-rows: 1.5fr 4fr 3fr 1fr;
+    align-items: center;
+    justify-content: center;
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        h1 {
+            font-family: 'Nunito', sans-serif;
+            color: $white;
+            cursor: pointer;
+        }
+        img {
+            cursor: pointer;
+        }
+    } 
+    .sidebar-top, .sidebar-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 600;
+    }
+    .menu-item i {
+        width: 20px;
+        margin-right: 32px;
+        cursor: pointer;
+    }
+    .menu-item p {
+        cursor: pointer;
+    }
+    .attribute a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.projects {
+    background-color: $bg;
+}
+
+.info {
+    background-color: $bg;
+}
